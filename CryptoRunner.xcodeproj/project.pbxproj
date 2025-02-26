@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D1500D832D6EDE1D001DC4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */; };
 		D1500D852D6EDE1D001DC4BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */; };
-		D1500D872D6EDE1D001DC4BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D862D6EDE1D001DC4BF /* ViewController.swift */; };
+		D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */; };
 		D1500D8A2D6EDE1D001DC4BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1500D882D6EDE1D001DC4BF /* Main.storyboard */; };
 		D1500D8D2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1500D8B2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld */; };
 		D1500D8F2D6EDE1E001DC4BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1500D8E2D6EDE1E001DC4BF /* Assets.xcassets */; };
@@ -21,7 +21,7 @@
 		D1500D7F2D6EDE1D001DC4BF /* CryptoRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D1500D862D6EDE1D001DC4BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialEnteringViewController.swift; sourceTree = "<group>"; };
 		D1500D892D6EDE1D001DC4BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1500D8C2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CryptoRunner.xcdatamodel; sourceTree = "<group>"; };
 		D1500D8E2D6EDE1E001DC4BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		D1500D9A2D6EDEF1001DC4BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D1500D862D6EDE1D001DC4BF /* ViewController.swift */,
+				D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,7 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1500D8D2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld in Sources */,
-				D1500D872D6EDE1D001DC4BF /* ViewController.swift in Sources */,
+				D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */,
 				D1500D832D6EDE1D001DC4BF /* AppDelegate.swift in Sources */,
 				D1500D852D6EDE1D001DC4BF /* SceneDelegate.swift in Sources */,
 			);
