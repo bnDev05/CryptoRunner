@@ -14,7 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if UserDefaults.standard.value(forKey: UserInformationManager.shared.keyConstant) == nil {
+            UserDefaults.standard.setValue(0, forKey: UserInformationManager.shared.keyConstant)
+        }
+        if UserDefaults.standard.value(forKey: UserInformationManager.shared.wonNFT) == nil {
+            UserDefaults.standard.setValue([] as [Int], forKey: UserInformationManager.shared.wonNFT)
+        }
         return true
     }
 

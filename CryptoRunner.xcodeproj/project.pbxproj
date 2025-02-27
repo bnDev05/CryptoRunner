@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D11E02F82D701B5B0005FAAD /* UserRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02F72D701B5B0005FAAD /* UserRootViewController.swift */; };
+		D11E02FA2D701C020005FAAD /* RunningMajorGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02F92D701C020005FAAD /* RunningMajorGameViewController.swift */; };
+		D11E02FC2D7021390005FAAD /* NFTRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02FB2D7021390005FAAD /* NFTRoomViewController.swift */; };
+		D11E02FE2D70218F0005FAAD /* HackModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02FD2D70218F0005FAAD /* HackModeViewController.swift */; };
+		D11E03002D7025120005FAAD /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02FF2D7025120005FAAD /* CustomAlertViewController.swift */; };
+		D11E03022D70356B0005FAAD /* UserInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03012D70356B0005FAAD /* UserInformationManager.swift */; };
 		D1500D832D6EDE1D001DC4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */; };
 		D1500D852D6EDE1D001DC4BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */; };
 		D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */; };
@@ -18,6 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D11E02F72D701B5B0005FAAD /* UserRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRootViewController.swift; sourceTree = "<group>"; };
+		D11E02F92D701C020005FAAD /* RunningMajorGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningMajorGameViewController.swift; sourceTree = "<group>"; };
+		D11E02FB2D7021390005FAAD /* NFTRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTRoomViewController.swift; sourceTree = "<group>"; };
+		D11E02FD2D70218F0005FAAD /* HackModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackModeViewController.swift; sourceTree = "<group>"; };
+		D11E02FF2D7025120005FAAD /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
+		D11E03012D70356B0005FAAD /* UserInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationManager.swift; sourceTree = "<group>"; };
 		D1500D7F2D6EDE1D001DC4BF /* CryptoRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +96,11 @@
 			isa = PBXGroup;
 			children = (
 				D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */,
+				D11E02F72D701B5B0005FAAD /* UserRootViewController.swift */,
+				D11E02F92D701C020005FAAD /* RunningMajorGameViewController.swift */,
+				D11E02FB2D7021390005FAAD /* NFTRoomViewController.swift */,
+				D11E02FD2D70218F0005FAAD /* HackModeViewController.swift */,
+				D11E02FF2D7025120005FAAD /* CustomAlertViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D1500D8B2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld */,
+				D11E03012D70356B0005FAAD /* UserInformationManager.swift */,
 			);
 			path = UserData;
 			sourceTree = "<group>";
@@ -186,9 +204,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1500D8D2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld in Sources */,
+				D11E02FC2D7021390005FAAD /* NFTRoomViewController.swift in Sources */,
+				D11E03002D7025120005FAAD /* CustomAlertViewController.swift in Sources */,
+				D11E02FE2D70218F0005FAAD /* HackModeViewController.swift in Sources */,
 				D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */,
+				D11E02FA2D701C020005FAAD /* RunningMajorGameViewController.swift in Sources */,
 				D1500D832D6EDE1D001DC4BF /* AppDelegate.swift in Sources */,
 				D1500D852D6EDE1D001DC4BF /* SceneDelegate.swift in Sources */,
+				D11E02F82D701B5B0005FAAD /* UserRootViewController.swift in Sources */,
+				D11E03022D70356B0005FAAD /* UserInformationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
