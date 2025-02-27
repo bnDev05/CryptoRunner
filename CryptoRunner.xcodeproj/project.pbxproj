@@ -14,6 +14,7 @@
 		D11E03002D7025120005FAAD /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02FF2D7025120005FAAD /* CustomAlertViewController.swift */; };
 		D11E03022D70356B0005FAAD /* UserInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03012D70356B0005FAAD /* UserInformationManager.swift */; };
 		D11E030E2D709FAE0005FAAD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D11E030D2D709FAE0005FAAD /* SnapKit */; };
+		D11E03112D70E3590005FAAD /* GamePatternValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03102D70E3590005FAAD /* GamePatternValidation.swift */; };
 		D1500D832D6EDE1D001DC4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */; };
 		D1500D852D6EDE1D001DC4BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */; };
 		D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */; };
@@ -31,6 +32,7 @@
 		D11E02FD2D70218F0005FAAD /* HackModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HackModeViewController.swift; sourceTree = "<group>"; };
 		D11E02FF2D7025120005FAAD /* CustomAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertViewController.swift; sourceTree = "<group>"; };
 		D11E03012D70356B0005FAAD /* UserInformationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationManager.swift; sourceTree = "<group>"; };
+		D11E03102D70E3590005FAAD /* GamePatternValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePatternValidation.swift; sourceTree = "<group>"; };
 		D1500D7F2D6EDE1D001DC4BF /* CryptoRunner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoRunner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D11E030F2D70E33F0005FAAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D11E03102D70E3590005FAAD /* GamePatternValidation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D1500D762D6EDE1D001DC4BF = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 				D1500D9A2D6EDEF1001DC4BF /* Controller */,
 				D1500D9B2D6EDF01001DC4BF /* Storyboards */,
 				D1500D932D6EDE1E001DC4BF /* Info.plist */,
+				D11E030F2D70E33F0005FAAD /* Model */,
 				D1500D9D2D6EE0BF001DC4BF /* nasalization */,
 				D1500D9C2D6EDF14001DC4BF /* UserData */,
 			);
@@ -213,6 +224,7 @@
 			files = (
 				D1500D8D2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld in Sources */,
 				D11E02FC2D7021390005FAAD /* NFTRoomViewController.swift in Sources */,
+				D11E03112D70E3590005FAAD /* GamePatternValidation.swift in Sources */,
 				D11E03002D7025120005FAAD /* CustomAlertViewController.swift in Sources */,
 				D11E02FE2D70218F0005FAAD /* HackModeViewController.swift in Sources */,
 				D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */,
