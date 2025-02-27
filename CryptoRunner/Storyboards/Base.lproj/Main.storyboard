@@ -746,13 +746,13 @@
                                                     <constraint firstAttribute="width" secondItem="Hny-EL-K49" secondAttribute="height" id="AJm-SJ-bcp"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filledHeart" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-gO-luC">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="filledHeart" translatesAutoresizingMaskIntoConstraints="NO" id="1e4-gO-luC">
                                                 <rect key="frame" x="48" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1e4-gO-luC" secondAttribute="height" id="lwa-Fr-LbW"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-8G-wh3">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyHeart" translatesAutoresizingMaskIntoConstraints="NO" id="Cmf-8G-wh3">
                                                 <rect key="frame" x="96" y="0.0" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Cmf-8G-wh3" secondAttribute="height" id="t2o-J9-b8j"/>
@@ -779,12 +779,25 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hackModeCenterImage" translatesAutoresizingMaskIntoConstraints="NO" id="IPZ-J0-EH0">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="360"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sLD-Aq-CWo">
+                                        <rect key="frame" x="4" y="4" width="352" height="352"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="IPZ-J0-EH0" firstAttribute="top" secondItem="tli-lh-QZJ" secondAttribute="top" id="B6m-hM-oJU"/>
+                                    <constraint firstAttribute="trailing" secondItem="sLD-Aq-CWo" secondAttribute="trailing" constant="4" id="BBO-Z5-0Wg"/>
+                                    <constraint firstItem="sLD-Aq-CWo" firstAttribute="leading" secondItem="tli-lh-QZJ" secondAttribute="leading" constant="4" id="DJh-dK-Gyb"/>
                                     <constraint firstAttribute="trailing" secondItem="IPZ-J0-EH0" secondAttribute="trailing" id="Sug-mx-lRV"/>
+                                    <constraint firstItem="sLD-Aq-CWo" firstAttribute="top" secondItem="tli-lh-QZJ" secondAttribute="top" constant="4" id="VpP-Ua-xHQ"/>
                                     <constraint firstAttribute="bottom" secondItem="IPZ-J0-EH0" secondAttribute="bottom" id="e5N-yD-RLP"/>
+                                    <constraint firstAttribute="bottom" secondItem="sLD-Aq-CWo" secondAttribute="bottom" constant="4" id="fZ9-Y5-doH"/>
                                     <constraint firstItem="IPZ-J0-EH0" firstAttribute="leading" secondItem="tli-lh-QZJ" secondAttribute="leading" id="fvr-IW-JYJ"/>
                                     <constraint firstAttribute="width" secondItem="tli-lh-QZJ" secondAttribute="height" id="l9j-dJ-dNd"/>
                                 </constraints>
@@ -812,6 +825,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="mainGameLeftIcon"/>
+                                        <connections>
+                                            <action selector="leftTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="7kA-Ya-mWH"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aXY-ak-PpE">
                                         <rect key="frame" x="118.33333333333334" y="0.0" width="103.33333333333334" height="214.66666666666666"/>
@@ -820,6 +836,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="103.33333333333333" height="103.33333333333333"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" backgroundImage="topArrowIcon"/>
+                                                <connections>
+                                                    <action selector="topTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="vmS-r6-aGY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efq-yS-Wi6">
                                                 <rect key="frame" x="0.0" y="111.33333333333326" width="103.33333333333333" height="103.33333333333331"/>
@@ -828,6 +847,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" backgroundImage="bottomArrowIcon"/>
+                                                <connections>
+                                                    <action selector="bottomTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="n5j-3t-XzK"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -841,6 +863,9 @@
                                                         <rect key="frame" x="20.000000000000004" y="20.000000000000004" width="63.333333333333343" height="63.333333333333343"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="blackHackModeKey"/>
+                                                        <connections>
+                                                            <action selector="keyTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="mKc-3R-Ird"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -857,7 +882,10 @@
                                                     <constraint firstAttribute="width" secondItem="pt0-h1-bxI" secondAttribute="height" id="PHa-A0-Rwa"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" backgroundImage="bottomArrowIcon"/>
+                                                <state key="normal" backgroundImage="mainGameRightIcon"/>
+                                                <connections>
+                                                    <action selector="rightTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="qTi-zs-eDb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -885,6 +913,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Qgu-Dp-ysH"/>
+                    <connections>
+                        <outlet property="bottomButton" destination="Efq-yS-Wi6" id="UeV-tQ-xAG"/>
+                        <outlet property="gameView" destination="sLD-Aq-CWo" id="Duy-w2-htt"/>
+                        <outlet property="keyButton" destination="6d6-DL-WeS" id="HiL-iY-cix"/>
+                        <outlet property="keysQuantity" destination="5sh-B1-hUb" id="Iyh-Dd-EmL"/>
+                        <outlet property="leftButton" destination="RAy-SR-y2m" id="YDK-Kj-jMo"/>
+                        <outlet property="rightButton" destination="pt0-h1-bxI" id="2Oo-2d-RDd"/>
+                        <outlet property="topButton" destination="WvG-VS-FZB" id="Inw-MM-67C"/>
+                        <outletCollection property="heartImages" destination="Hny-EL-K49" collectionClass="NSMutableArray" id="RXz-9T-HEI"/>
+                        <outletCollection property="heartImages" destination="1e4-gO-luC" collectionClass="NSMutableArray" id="FLF-gZ-F2s"/>
+                        <outletCollection property="heartImages" destination="Cmf-8G-wh3" collectionClass="NSMutableArray" id="dih-hk-9P9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hgh-BL-h1C" sceneMemberID="firstResponder"/>
             </objects>
