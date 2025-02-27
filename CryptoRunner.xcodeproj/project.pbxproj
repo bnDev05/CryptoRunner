@@ -13,6 +13,7 @@
 		D11E02FE2D70218F0005FAAD /* HackModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02FD2D70218F0005FAAD /* HackModeViewController.swift */; };
 		D11E03002D7025120005FAAD /* CustomAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E02FF2D7025120005FAAD /* CustomAlertViewController.swift */; };
 		D11E03022D70356B0005FAAD /* UserInformationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11E03012D70356B0005FAAD /* UserInformationManager.swift */; };
+		D11E030E2D709FAE0005FAAD /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D11E030D2D709FAE0005FAAD /* SnapKit */; };
 		D1500D832D6EDE1D001DC4BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D822D6EDE1D001DC4BF /* AppDelegate.swift */; };
 		D1500D852D6EDE1D001DC4BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D842D6EDE1D001DC4BF /* SceneDelegate.swift */; };
 		D1500D872D6EDE1D001DC4BF /* InitialEnteringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1500D862D6EDE1D001DC4BF /* InitialEnteringViewController.swift */; };
@@ -47,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D11E030E2D709FAE0005FAAD /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +149,9 @@
 			dependencies = (
 			);
 			name = CryptoRunner;
+			packageProductDependencies = (
+				D11E030D2D709FAE0005FAAD /* SnapKit */,
+			);
 			productName = CryptoRunner;
 			productReference = D1500D7F2D6EDE1D001DC4BF /* CryptoRunner.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +180,9 @@
 				Base,
 			);
 			mainGroup = D1500D762D6EDE1D001DC4BF;
+			packageReferences = (
+				D11E030C2D709FAE0005FAAD /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = D1500D802D6EDE1D001DC4BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,6 +453,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D11E030C2D709FAE0005FAAD /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D11E030D2D709FAE0005FAAD /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D11E030C2D709FAE0005FAAD /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D1500D8B2D6EDE1D001DC4BF /* CryptoRunner.xcdatamodeld */ = {

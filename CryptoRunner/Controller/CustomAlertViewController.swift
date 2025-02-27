@@ -28,7 +28,13 @@ class CustomAlertViewController: UIViewController {
     
     @IBAction func topButtonGotClicked(_ sender: UIButton) {
         if let isGameOver = isGameOver {
-            
+            if isGameOver {
+                if let pushToRun = storyboard?.instantiateViewController(withIdentifier: "RunningMajorGameViewController") as? RunningMajorGameViewController {
+                    navigationController?.pushViewController(pushToRun, animated: true)
+                }
+            } else {
+                
+            }
         } else {
             navigationController?.popViewController(animated: true)
         }
@@ -36,7 +42,11 @@ class CustomAlertViewController: UIViewController {
     
     @IBAction func bottomButtonGotClicked(_ sender: UIButton) {
         if let isGameOver = isGameOver {
-            
+            if isGameOver {
+                navigationController?.popToRootViewController(animated: true)
+            } else {
+                
+            }
         } else {
             navigationController?.popToRootViewController(animated: true)
         }
