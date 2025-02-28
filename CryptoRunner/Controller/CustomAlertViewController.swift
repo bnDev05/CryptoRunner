@@ -32,8 +32,6 @@ class CustomAlertViewController: UIViewController {
                 if let pushToRun = storyboard?.instantiateViewController(withIdentifier: "RunningMajorGameViewController") as? RunningMajorGameViewController {
                     navigationController?.pushViewController(pushToRun, animated: true)
                 }
-            } else {
-                
             }
         } else {
             navigationController?.popViewController(animated: true)
@@ -45,7 +43,7 @@ class CustomAlertViewController: UIViewController {
             if isGameOver {
                 navigationController?.popToRootViewController(animated: true)
             } else {
-                
+                navigationController?.popViewController(animated: true)
             }
         } else {
             navigationController?.popToRootViewController(animated: true)
@@ -63,8 +61,11 @@ class CustomAlertViewController: UIViewController {
             centerImageView.image = UIImage(named: centerImageName)
             topButton.setTitle(firstButtonTitle, for: .normal)
             bottomButton.setTitle(secondButtonTitle, for: .normal)
-        } else {
-            topButton.isHidden = true
+        }
+        if let isGameOver = isGameOver {
+            if !isGameOver {
+                topButton.isHidden = true
+            }
         }
     }
 }

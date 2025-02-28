@@ -238,6 +238,15 @@ class RunningMajorGameViewController: UIViewController {
     
     func updateNFT(array: [Int]) {
         UserDefaults.standard.setValue(array, forKey: nftKey)
+        if let pushToWon = storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as? CustomAlertViewController {
+            pushToWon.titleText = "Hacked"
+            pushToWon.subtitleText = "New NFT Unlocked"
+            pushToWon.centerImageName = "bigLockImage"
+            pushToWon.firstButtonTitle = ""
+            pushToWon.secondButtonTitle = "Continue Running"
+            pushToWon.isGameOver = false
+            navigationController?.pushViewController(pushToWon, animated: true)
+        }
     }
     
     func gameOver() {
