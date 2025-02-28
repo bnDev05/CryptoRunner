@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  CryptoRunner
-//
-//  Created by Behruz Norov on 26/02/25.
-//
 
 import UIKit
 

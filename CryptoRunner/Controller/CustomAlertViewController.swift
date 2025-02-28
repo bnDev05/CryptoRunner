@@ -1,9 +1,3 @@
-//
-//  CustomAlertViewController.swift
-//  CryptoRunner
-//
-//  Created by Behruz Norov on 27/02/25.
-//
 
 import UIKit
 
