@@ -139,9 +139,11 @@ class HackModeViewController: UIViewController {
                 updateNFT(array: nftArray)
             }
         }
-        if !nftArray.contains(6) {
-            nftArray.append(6)
-            updateNFT(array: nftArray)
+        if keysAmount == 2 {
+            if !nftArray.contains(6) {
+                nftArray.append(6)
+                updateNFT(array: nftArray)
+            }
         }
         setupGame()
     }
