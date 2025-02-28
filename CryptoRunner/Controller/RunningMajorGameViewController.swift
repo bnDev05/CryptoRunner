@@ -18,9 +18,13 @@ class RunningMajorGameViewController: UIViewController {
     var gameTimer: Timer?
     var speed: CGFloat = 5.0
     var speedBoostActive = false
-    
     let redBarrierColor = UIColor(red: 255/255, green: 0, blue: 0, alpha: 1.0)
     let pinkSpeedColor = UIColor(red: 255/255, green: 0, blue: 238/238, alpha: 1.0)
+    var speedBoost = 0
+    
+    let nftKey = UserInformationManager.shared.wonNFT
+    var nftArray = UserDefaults.standard.value(forKey: UserInformationManager.shared.wonNFT) as! [Int]
+    var allKeys = UserDefaults.standard.value(forKey: UserInformationManager.shared.keyConstant) as! Int
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,10 +70,16 @@ class RunningMajorGameViewController: UIViewController {
         let randomObject = Int.random(in: 0...10)
 
         if randomObject == 0 { // Red barrier
+            if speedBoost > 0 {
+                speedBoost -= 1
+            }
             newObject.backgroundColor = redBarrierColor
             newObject.frame.size.height = 6
             newObject.tag = 1
         } else if randomObject < 2 { // Key
+            if speedBoost > 0 {
+                speedBoost -= 1
+            }
             let imageName = ["blackHackModeKey", "whiteKeyImage"].randomElement()!
             let keyImageView = UIImageView(image: UIImage(named: imageName))
             keyImageView.contentMode = .scaleAspectFit
@@ -77,6 +87,13 @@ class RunningMajorGameViewController: UIViewController {
             newObject.addSubview(keyImageView)
             newObject.tag = 2
         } else if randomObject < 3 { // Pink speed area
+            speedBoost += 1
+            if speedBoost >= 5 {
+                if !nftArray.contains(3) {
+                    nftArray.append(3)
+                    updateNFT(array: nftArray)
+                }
+            }
             newObject.backgroundColor = pinkSpeedColor.withAlphaComponent(0.24)
             let topView = UIView()
             let bottomView = UIView()
@@ -167,6 +184,18 @@ class RunningMajorGameViewController: UIViewController {
     
     func collectKey() {
         keysAmount += 1
+        if keysAmount == 50 {
+            if !nftArray.contains(1) {
+                nftArray.append(1)
+                updateNFT(array: nftArray)
+            }
+        }
+        if allKeys + keysAmount == 1000 {
+            if !nftArray.contains(2) {
+                nftArray.append(2)
+                updateNFT(array: nftArray)
+            }
+        }
         keysAmountLabel.text = "\(keysAmount)"
     }
     
@@ -186,7 +215,29 @@ class RunningMajorGameViewController: UIViewController {
     
     func updateDistance() {
         distance += 1
+        if distance == 1000 {
+            if !nftArray.contains(0) {
+                nftArray.append(0)
+                updateNFT(array: nftArray)
+            }
+        }
+        if distance == 1200 {
+            if !nftArray.contains(4) {
+                nftArray.append(4)
+                updateNFT(array: nftArray)
+            }
+        }
+        if distance == 800 {
+            if !nftArray.contains(5) {
+                nftArray.append(5)
+                updateNFT(array: nftArray)
+            }
+        }
         distanceLabel.text = "\(distance)m"
+    }
+    
+    func updateNFT(array: [Int]) {
+        UserDefaults.standard.setValue(array, forKey: nftKey)
     }
     
     func gameOver() {

@@ -880,7 +880,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" backgroundImage="blackHackModeKey"/>
                                                         <connections>
-                                                            <action selector="keyTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="mKc-3R-Ird"/>
+                                                            <action selector="keyButtonGotTapped:" destination="SzT-vC-wTW" eventType="touchUpInside" id="zHA-kH-h6j"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

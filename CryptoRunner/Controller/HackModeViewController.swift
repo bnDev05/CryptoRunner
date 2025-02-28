@@ -29,6 +29,11 @@ class HackModeViewController: UIViewController {
     let whiteColor = UIColor.white
     var lives = 3
     var keysAmount = 0
+    var hasBegun = true
+    let nftKey = UserInformationManager.shared.wonNFT
+    var nftArray = UserDefaults.standard.value(forKey: UserInformationManager.shared.wonNFT) as! [Int]
+    var allKeys = UserDefaults.standard.value(forKey: UserInformationManager.shared.keyConstant) as! Int
+    var hasMadeMistake = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +42,44 @@ class HackModeViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        setupGame()
+        if hasBegun {
+            hasBegun = false
+            setupGame()
+        }
     }
     
     @IBAction func leftTapped(_ sender: UIButton) { movePlayer(dx: -sizeToSetBalls, dy: 0) }
     @IBAction func rightTapped(_ sender: UIButton) { movePlayer(dx: sizeToSetBalls, dy: 0) }
     @IBAction func bottomTapped(_ sender: UIButton) { movePlayer(dx: 0, dy: sizeToSetBalls) }
     @IBAction func topTapped(_ sender: UIButton) { movePlayer(dx: 0, dy: -sizeToSetBalls) }
+    
+    @IBAction func keyButtonGotTapped(_ sender: UIButton) {
+        if keysAmount > 0 {
+            keysAmount -= 1
+            keysQuantity.text = "\(keysAmount)"
+            if let barier = getRandomRedBarrier() {
+                barier.backgroundColor = whiteColor
+                barier.isHidden = true
+            }
+        }
+    }
+    
+    @IBAction func returnToHome(_ sender: UIButton) {
+        if let pushToPause = storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as? CustomAlertViewController {
+            pushToPause.titleText = "Pause"
+            pushToPause.subtitleText = ""
+            pushToPause.centerImageName = "mainScreenCenterImage"
+            pushToPause.firstButtonTitle = "Continue"
+            pushToPause.secondButtonTitle = "Back to Home"
+            pushToPause.isGameOver = nil
+            navigationController?.pushViewController(pushToPause, animated: true)
+        }
+    }
+    
+    private func getRandomRedBarrier() -> UIView? {
+        let allRedBarriers = (horizontalViews + verticalViews).filter { $0.backgroundColor == redColor }
+        return allRedBarriers.randomElement()
+    }
     
     private func movePlayer(dx: CGFloat, dy: CGFloat) {
         let newX = playerBall.center.x + dx
@@ -82,6 +118,37 @@ class HackModeViewController: UIViewController {
         verticalViews.forEach { $0.removeFromSuperview() }
         horizontalViews.removeAll()
         verticalViews.removeAll()
+        if hasMadeMistake {
+            if !nftArray.contains(8) {
+                nftArray.append(8)
+                updateNFT(array: nftArray)
+            }
+        }
+        hasMadeMistake = true
+        keysAmount += 1
+        keysQuantity.text = "\(keysAmount)"
+        if keysAmount == 10 {
+            if !nftArray.contains(7) {
+                nftArray.append(7)
+                updateNFT(array: nftArray)
+            }
+        }
+        if keysAmount == 5 {
+            if !nftArray.contains(9) {
+                nftArray.append(9)
+                updateNFT(array: nftArray)
+            }
+        }
+        if keysAmount == 4 {
+            if !nftArray.contains(10) {
+                nftArray.append(10)
+                updateNFT(array: nftArray)
+            }
+        }
+        if !nftArray.contains(6) {
+            nftArray.append(6)
+            updateNFT(array: nftArray)
+        }
         setupGame()
     }
     
@@ -135,6 +202,7 @@ class HackModeViewController: UIViewController {
     }
     
     private func loseLife() {
+        hasMadeMistake = false
         if lives > 0 {
             lives -= 1
             updateHeartsDisplay()
@@ -162,5 +230,9 @@ class HackModeViewController: UIViewController {
             pushToPause.isGameOver = true
             navigationController?.pushViewController(pushToPause, animated: true)
         }
+    }
+    
+    func updateNFT(array: [Int]) {
+        UserDefaults.standard.setValue(array, forKey: nftKey)
     }
 }
