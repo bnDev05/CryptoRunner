@@ -224,6 +224,8 @@ class HackModeViewController: UIViewController {
         
         if let pushToPause = storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as? CustomAlertViewController {
             pushToPause.titleText = "Game Over"
+            pushToPause.subtitleText = ""
+            pushToPause.isMainGame = false
             pushToPause.centerImageName = "loseImage"
             pushToPause.firstButtonTitle = "New Run"
             pushToPause.secondButtonTitle = "Back to Home"

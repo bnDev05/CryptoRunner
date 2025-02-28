@@ -173,7 +173,7 @@ class RunningMajorGameViewController: UIViewController {
     }
     
     func updateHeartsDisplay() {
-        for (index, heart) in heartImageViews.enumerated() {
+        for (_, heart) in heartImageViews.enumerated() {
             if heart.tag < lives {
                 heart.image = UIImage(named: "filledHeart")
             } else {
@@ -257,6 +257,7 @@ class RunningMajorGameViewController: UIViewController {
         if let pushToPause = storyboard?.instantiateViewController(withIdentifier: "CustomAlertViewController") as? CustomAlertViewController {
             pushToPause.titleText = "Game Over"
             pushToPause.subtitleText = ""
+            pushToPause.isMainGame = true
             pushToPause.centerImageName = "loseImage"
             pushToPause.firstButtonTitle = "New Run"
             pushToPause.secondButtonTitle = "Back to Home"

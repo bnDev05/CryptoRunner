@@ -20,6 +20,7 @@ class CustomAlertViewController: UIViewController {
     var firstButtonTitle: String?
     var secondButtonTitle: String?
     var isGameOver: Bool?
+    var isMainGame: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,15 @@ class CustomAlertViewController: UIViewController {
     @IBAction func topButtonGotClicked(_ sender: UIButton) {
         if let isGameOver = isGameOver {
             if isGameOver {
-                if let pushToRun = storyboard?.instantiateViewController(withIdentifier: "RunningMajorGameViewController") as? RunningMajorGameViewController {
-                    navigationController?.pushViewController(pushToRun, animated: true)
+                guard let isMainGame = isMainGame else { return }
+                if isMainGame {
+                    if let pushToRun = storyboard?.instantiateViewController(withIdentifier: "RunningMajorGameViewController") as? RunningMajorGameViewController {
+                        navigationController?.pushViewController(pushToRun, animated: true)
+                    }
+                } else {
+                    if let pushToPuzzle = storyboard?.instantiateViewController(withIdentifier: "HackModeViewController") as? HackModeViewController {
+                        navigationController?.pushViewController(pushToPuzzle, animated: true)
+                    }
                 }
             }
         } else {
